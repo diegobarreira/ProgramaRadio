@@ -40,10 +40,12 @@ public class P3Ej3 {
                     error = true;// hay un error
                 }
                 segundosQueDuraElPrograma = calcularSegundos(hora, minutos);// obtenemos los segundos que dura el programa
-                duracionTotalEnSegundos -= segundosQueDuraElPrograma;// Restamos al total de segundos disponibles los segundos que hemos gastado
-                if (duracionTotalEnSegundos < 0) {// si la duración total es negativa es porque un programa de radio se pisa con otro
+                //System.out.println(duracionTotalEnSegundos + " " + segundosQueDuraElPrograma + " " + (duracionTotalEnSegundos - segundosQueDuraElPrograma));
+                if ((duracionTotalEnSegundos - segundosQueDuraElPrograma) < 0) {// si la duración total es negativa es porque un programa de radio se pisa con otro
                     System.out.println("El tiempo ha desbordado");// comentario para el usuario
                     error = true;// hay un error
+                } else {// sino
+                    duracionTotalEnSegundos -= segundosQueDuraElPrograma;// Restamos al total de segundos disponibles los segundos que hemos gastado
                 }
                 if (duracionTotalEnSegundos <= MIN_SEGUNDOS) {// Si tenemos todo el tiemp ocupado dejamos de crear programas
                     salir = true;// salimos del bucle
@@ -66,7 +68,7 @@ public class P3Ej3 {
             fm.setTitulo(tituloPrograma);// introducimos titulo del programa
             fm.setLocutor(locutor);// introducimos locutor
             fm.setHoraEmision(lt);// introducimos la hora la cual empezará a emitirse el programa
-            fm.setMinutosDuracion(segundosQueDuraElPrograma / 60);// introducimos los segundos que dura el programa
+            fm.setMinutosDuracion(segundosQueDuraElPrograma / 60);// introducimos los minutos que dura el programa
             misProgramas.add(fm);// lo añadimos a nuestro contenedor
         }
 
