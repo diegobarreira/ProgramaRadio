@@ -15,20 +15,14 @@ public class ProgramaRadio {
     private long minutosDuracion;
 
     /**
-     * Constructor vacío
-     */
-    public ProgramaRadio() {
-    }
-
-    /**
      * Constructor con parametros
      *
-     * @param horaEmision
      * @param titulo
      * @param locutor
      * @param minutosDuracion
+     * @param horaEmision
      */
-    public ProgramaRadio(LocalTime horaEmision, String titulo, String locutor, long minutosDuracion) {
+    public ProgramaRadio(String titulo, String locutor, long minutosDuracion, LocalTime horaEmision) {
         this.horaEmision = horaEmision;
         this.titulo = titulo;
         this.locutor = locutor;
@@ -40,32 +34,17 @@ public class ProgramaRadio {
         return horaEmision;
     }
 
-    public void setHoraEmision(LocalTime horaEmision) {
-        this.horaEmision = horaEmision;
-    }
-
     public String getTitulo() {
         return titulo;
     }
 
-    public void setTitulo(String titulo) {
-        this.titulo = titulo;
-    }
 
     public String getLocutor() {
         return locutor;
     }
 
-    public void setLocutor(String locutor) {
-        this.locutor = locutor;
-    }
-
     public long getMinutosDuracion() {
         return minutosDuracion;
-    }
-
-    public void setMinutosDuracion(long minutosDuracion) {
-        this.minutosDuracion = minutosDuracion;
     }
 
     /* ToString */
