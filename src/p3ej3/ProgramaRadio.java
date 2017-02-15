@@ -53,7 +53,7 @@ public class ProgramaRadio {
         return "El programa de radio " + titulo
                 + " será emitido por " + locutor
                 + " durante " + minutosDuracion
-                + " minutos y su emisión empezará a las " + horaEmision;
+                + " minutos y su emisión empezará a las " + horaEmision + "\n";
     }
 
 }

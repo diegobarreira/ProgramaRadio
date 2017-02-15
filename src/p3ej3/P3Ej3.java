@@ -41,7 +41,7 @@ public class P3Ej3 {
                             repetir = true;
                         }
                     } catch (NumberFormatException e) {
-                        System.err.println("Debe introducir números");
+                        System.err.println("Debe introducir números // " + e.getMessage());
                         repetir = true;
                     }
                 } while (repetir);
